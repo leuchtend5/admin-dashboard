@@ -24,11 +24,61 @@ body {
   grid-template-columns: 1fr 4fr;
 }
 
+/* to make all the menu icon in center, 
+I need to make another div to wrap the image.
+And target that div to make same width */
 .menu {
   display: grid;
   grid-row: span 2;
   background-color: aqua;
   padding: 15px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-icon {
+  display: flex;
+  margin-right: 5px;
+  width: 20%;
+  justify-content: center;
+}
+
+.title-menu,
+.menu-main > div,
+.support-menu > div {
+  display: flex;
+  align-items: center;
+}
+
+.title-menu {
+  font-size: 1.5rem;
+  font-family: my-font;
+}
+
+.title-menu .menu-icon > img {
+  width: 100%;
+}
+
+.menu-main img,
+.support-menu img {
+  width: 50%;
+}
+
+.menu-main > div,
+.support-menu > div {
+  font-size: 1.1rem;
+  font-family: my-font;
+}
+
+.menu-main,
+.support-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .header {
