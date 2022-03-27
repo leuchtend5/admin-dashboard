@@ -87,19 +87,11 @@ And target that div to make same width */
   background-color: bisque;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-.footer {
-  background-color: burlywood;
+  padding: 15px 40px;
 }
 
 .icon {
-  width: 50px;
+  width: 40px;
   border-radius: 50%;
 }
 
@@ -107,8 +99,34 @@ h1 {
   font-size: 1rem;
 }
 
-.welcome-text > img {
-  width: 100px;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info > img {
+  width: 65px;
+  border-radius: 50%;
+}
+
+.top-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.welcome-text > h2:nth-child(1) {
+  font-size: 0.8rem;
+}
+
+.welcome-text > h2:nth-child(2) {
+  font-size: 1.3rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .project-box {
@@ -134,4 +152,5 @@ h1 {
 
 .footer {
   grid-column: span 2;
+  background-color: burlywood;
 }
