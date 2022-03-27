@@ -1,0 +1,84 @@
+@font-face {
+  font-family: my-font;
+  src: url(/font/Roboto-Medium.ttf);
+}
+
+:root {
+  --content-bg: whitesmoke;
+  --menu-bg: lightblue;
+  --color: silver;
+  --icon-size: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.menu {
+  display: grid;
+  grid-row: span 2;
+  background-color: aqua;
+  padding: 15px;
+}
+
+.header {
+  background-color: bisque;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.footer {
+  background-color: burlywood;
+}
+
+.icon {
+  width: 50px;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+.welcome-text > img {
+  width: 100px;
+}
+
+.project-box {
+  border: 2px solid black;
+  grid-row: span 2;
+}
+
+.project {
+  border: 1px solid black;
+}
+
+.ann-box {
+  border: 2px solid black;
+}
+
+.ann {
+  border: 1px solid black;
+}
+
+.trending-box {
+  border: 2px solid black;
+}
+
+.footer {
+  grid-column: span 2;
+}
