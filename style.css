@@ -99,7 +99,7 @@ And target that div to make same width */
   padding: 15px 40px;
   gap: 20px;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
 }
 
 h1,
@@ -129,7 +129,8 @@ input {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-self: end;
+  justify-self: flex-end;
+  padding-right: 20px;
 }
 
 .top-right > img:nth-child(1) {
@@ -167,9 +168,8 @@ h1 {
 
 .header-button {
   display: flex;
-  gap: 25px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 button {
@@ -185,7 +185,8 @@ button {
 
 .content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 25px 15px;
   background-color: var(--grey-text);
 }
@@ -203,49 +204,130 @@ h3 {
 
 .project-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  padding-right: 15px;
+  height: calc(100% - 30px); /* 20px is the gap + 10px margin bottom  */
 }
 
 .project-bg {
-  background-color: black;
-  height: 200px;
-  width: clamp(240px, 90%, 300px);
+  background-color: var(--icon-bg);
+  width: clamp(240px, calc(100% - 10px), 400px);
   padding-left: 10px;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 5px;
 }
 
 .project {
-  background-color: skyblue;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  height: 150px;
-  padding: 25px 15px;
-  justify-content: space-between;
+  padding: 15px 15px;
+  justify-content: space-around;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  height: calc(100% - 30px); /* 30px are both top and bot padding */
 }
 
 .project-utility-icon {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 15px;
+}
+
+.project-text p,
+.ann p,
+.trending-text p:nth-child(2) {
+  font-family: light-font;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.project-text h4 {
+  font-family: bold-font;
+  font-size: 1rem;
+}
+
+.project-text p {
+  font-size: 0.9rem;
 }
 
 .ann-box {
-  border: 2px solid black;
+  background-color: var(--grey-text);
+}
+
+.content-ann {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 5px;
+}
+
+.ann h4 {
+  font-family: bold-font;
+  font-size: 0.8rem;
 }
 
 .ann {
-  border: 1px solid black;
+  padding: 5px;
+}
+
+.ann p {
+  font-size: 0.7rem;
+}
+
+hr {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .trending-box {
-  border: 2px solid black;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-trending {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 20px 0px;
+  padding-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 5px;
+  border-radius: 8px;
+}
+
+.trending-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.trending-text p:nth-child(1) {
+  font-family: light-font;
+}
+
+.trending-text p {
+  font-size: 0.8rem;
 }
 
 .footer {
   grid-column: span 2;
-  background-color: burlywood;
+  background-color: #616060;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 6px 0px;
+}
+
+.fa-github {
+  color: white;
+  transition: 0.5s;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg);
 }
