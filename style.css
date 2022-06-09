@@ -1,11 +1,11 @@
 @font-face {
   font-family: light-font;
-  src: url(/font/Roboto-Light.ttf);
+  src: url(font/Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: bold-font;
-  src: url(/font/Roboto-Medium.ttf);
+  src: url(font/Roboto-Medium.ttf);
 }
 
 :root {
